@@ -1,0 +1,30 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Java / Spring Boot
+target/
+*.class
+
+# Node / React
+node_modules/
+dist/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+# MySQL local database files
+database/mysql-data/
+
+# Database runtime files
+*.pid
+*.pem
+*.key
