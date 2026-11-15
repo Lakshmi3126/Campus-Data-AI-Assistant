@@ -7,6 +7,8 @@ import DashboardPage from './pages/DashboardPage';
 import QueryAssistantPage from './pages/QueryAssistantPage';
 import { api } from './services/api';
 import QueryHistoryPage from './pages/QueryHistoryPage';
+import AnalyticsPage from './pages/AnalyticsPage';
+import DatabaseSchemaPage from './pages/DatabaseSchemaPage';
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -59,21 +61,10 @@ function App() {
         return <QueryHistoryPage />;
 
         case 'analytics':
-        case 'schema':
-        return (
-            <div className="page-wrapper">
-            <div className="glass-card" style={{ padding: '2rem' }}>
-                <h2 style={{ marginBottom: '0.75rem' }}>
-                {activeTab === 'analytics'
-                    ? 'Academic Analytics'
-                    : 'Database Schema'}
-                </h2>
-                <p style={{ color: 'var(--text-secondary)' }}>
-                This page has not yet been implemented.
-                </p>
-            </div>
-            </div>
-        );
+  return <AnalyticsPage />;
+
+case 'schema':
+  return <DatabaseSchemaPage />;
       
 
       default:
